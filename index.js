@@ -18,6 +18,7 @@ http.createServer((req,res)=>{
  * 查看已经安装的镜像 docker images
  * 查看jenkins服务 docker ps | grep jenkins
  * docker run -d --name jenkins_01 -p 8081:8080 -v /Users/web/Documents/workspace/gzh/jenkins_home:/Users/web/Documents/workspace/gzh/jenkins_home jenkins/jenkins:lts
+ * docker run -itd --name jenkins_01 jenkins/jenkins:lts /bin/bash
  * 启动服务端 。localhost:8081
  * 
  * 进入容器内部docker exec -it jenkins_home bash
