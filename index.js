@@ -37,4 +37,16 @@ http.createServer((req,res)=>{
  * sudo su  -> 普通用户切换成root用户
  * root用户切成为普通用户  ->  su xxxx
  * vi xxx.js :set num 显示行号
+ * 
+ * 要删除images 先删除引用的容器
+ * docker ps -a 查看dokcer容器
+ * docker rm xxx  删除容器
+ * 
+ * 停止所有的container，这样才能够删除其中的images： docker stop $(docker ps -a -q)
+ * 如果想要删除所有container的话再加一个指令：docker rm $(docker ps -a -q)
+ * 
+ * 想要删除untagged images，也就是那些id为<None>的image的话可以用
+ * docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+ * 要删除全部image的话  docker rmi $(docker images -q)
+ * 删除images 报错的话，采用name+tag删除
  */
