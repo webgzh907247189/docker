@@ -49,4 +49,10 @@ http.createServer((req,res)=>{
  * docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
  * 要删除全部image的话  docker rmi $(docker images -q)
  * 删除images 报错的话，采用name+tag删除
+ * 
+ * https://segmentfault.com/a/1190000019512222 docker 构建 & run
+ * 构建这个镜像 docker build -t docker-demo/hello-docker:v1 . (注意最后有个 . 是必须的)
+ * -t: --tag简写，镜像的名字及标签，通常 name:tag 或者 name 格式；可以在一次构建中为一个镜像设置多个标签。
+ * 
+ * 执行命令: docker run -i -t -p 8080:3000 docker-demo/hello-docker:v1
  */
