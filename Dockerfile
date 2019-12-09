@@ -19,5 +19,6 @@ COPY . .
 
 EXPOSE 3001
 
-RUN ls
+# RUN ls
+# RUN pwd
 cmd npm run server 
