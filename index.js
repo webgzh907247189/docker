@@ -2,9 +2,9 @@
 const http = require('http');
 
 http.createServer((req,res)=>{
-    res.end('hello docker')
+    res.end('adasdasdasd')
 }).listen(3001,()=>{
-    console.log('server start~~')
+    console.log('server start~~~~')
 })
 
 /**
@@ -21,7 +21,7 @@ http.createServer((req,res)=>{
  * docker run -itd --name jenkins_01 jenkins/jenkins:lts /bin/bash
  * 启动服务端 。localhost:8081
  * 
- * 进入容器内部docker exec -it jenkins_home bash
+ * 进入容器内部docker exec -it jenkins_home /bin/bash
  * cat /var/jenkins_home/secrets/initialAdminPassword，得到密码并粘贴过去
  * docker restart {CONTAINER ID}
  * 
