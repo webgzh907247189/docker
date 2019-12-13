@@ -12,6 +12,7 @@ WORKDIR /
 # 把目录，或者 url 地址文件加入到镜像的文件系统中
 ADD ../mobxDemo/postcss.config.js
 
+# COPY 源地址 目标地址
 COPY . .
 
 # RUN npm install
