@@ -38,6 +38,10 @@ http.createServer((req,res)=>{
  * root用户切成为普通用户  ->  su xxxx
  * vi xxx.js :set num 显示行号
  * 
+ * 
+ * docker port 查看容器端口映射
+ * docker stats 查看容器资源占用
+ * 
  * 要删除images 先删除引用的容器
  * docker ps -a 查看dokcer容器
  * docker rm xxx  删除容器
